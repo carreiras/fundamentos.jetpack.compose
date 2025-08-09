@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import carreiras.com.github.jetpackcompose.ui.theme.JetpackComposeTheme
 
@@ -18,12 +19,20 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Text(
-                        text = getString(R.string.hello_world),
+                    TextoCustomizado(
+                        "Primeira função composable",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
         }
+    }
+
+    @Composable
+    fun TextoCustomizado(texto: String, modifier: Modifier) {
+        Text(
+            text = texto,
+            modifier = modifier.fillMaxSize()
+        )
     }
 }
