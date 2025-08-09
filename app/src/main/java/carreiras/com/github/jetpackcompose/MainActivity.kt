@@ -10,6 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import carreiras.com.github.jetpackcompose.ui.theme.JetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -29,10 +30,18 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    fun TextoCustomizado(texto: String, modifier: Modifier) {
+    fun TextoCustomizado(texto: String, modifier: Modifier = Modifier) {
         Text(
             text = texto,
             modifier = modifier.fillMaxSize()
         )
+    }
+
+    @Preview(showBackground = true)
+    @Composable
+    fun Preview() {
+        JetpackComposeTheme {
+            TextoCustomizado("Primeira função composable")
+        }
     }
 }
