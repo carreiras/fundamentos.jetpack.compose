@@ -33,10 +33,10 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun Inicial(modifier: Modifier = Modifier) {
         Column (modifier = modifier.background(color=Color.Blue)) {
-            TextoCustomizado("Primeira função composable.", modifier)
+            TextoCustomizado("Primeira função composable.")
             Row {
-                TextoCustomizado("Seja bem vindo!", modifier)
-                TextoCustomizado("Olá usuário.", modifier)
+                TextoCustomizado("Seja bem vindo!")
+                TextoCustomizado("Olá usuário.")
             }
         }
     }
