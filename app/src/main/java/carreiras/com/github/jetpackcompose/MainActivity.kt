@@ -32,6 +32,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import carreiras.com.github.jetpackcompose.componentes.SimpleOutlineTextField
 import carreiras.com.github.jetpackcompose.componentes.SimpleTextField
 import carreiras.com.github.jetpackcompose.ui.theme.JetpackComposeTheme
 
@@ -42,7 +43,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SimpleTextField(Modifier.padding(innerPadding))
+                    SimpleOutlineTextField(Modifier.padding(innerPadding))
                 }
             }
         }
